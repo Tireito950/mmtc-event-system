@@ -23,11 +23,24 @@ $result = mysqli_query($conn, $sql);
                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
                     <div class="col-md-6 col-lg-4">
                         <div class="event-card h-100">
-                            <div class="event-visual event-visual-large">
+                            <!-- <div class="event-visual event-visual-large">
                                 <span class="event-icon"><i class="bi bi-calendar2-week"></i></span>
                                 <span class="event-date-chip"><?php echo date("d M Y", strtotime($row['event_date'])); ?></span>
-                            </div>
-                            <div class="card-body d-flex flex-column">
+                            </div> -->
+                          <!-- Event Image -->
+                        <div class="position-relative">
+                            <img src="images/<?php echo htmlspecialchars($row['event_image']); ?>"
+                                 class="card-img-top"
+                                 alt="<?php echo htmlspecialchars($row['event_name']); ?>"
+                                 style="height: 140px; object-fit: cover;">
+
+                            <!-- Date -->
+                            <span class="event-date-chip position-absolute top-0 end-0 m-2">
+                                <?php echo date("d M Y", strtotime($row['event_date'])); ?>
+                            </span>
+                        </div>
+                        
+                            <div class="card-body d-flex flex-column">                              
                                 <span class="small text-gold fw-semibold text-uppercase">College Event</span>
                                 <h4 class="mt-2"><?php echo htmlspecialchars($row['event_name']); ?></h4>
                                 <div class="event-meta"><i class="bi bi-geo-alt"></i> <?php echo htmlspecialchars($row['event_venue']); ?></div>
