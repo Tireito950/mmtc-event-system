@@ -16,12 +16,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.php">
-            <span class="brand-mark"><i class="bi bi-building"></i></span>
+            <img src="images/logo.jpg" alt="Macmillan College Logo" class="brand-logo">
+
             <span>
                 <strong>MACMILLAN</strong>
                 <small>COLLEGE</small>
             </span>
         </a>
+
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
