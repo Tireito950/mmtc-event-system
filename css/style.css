@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root {
-    --navy: #0b376b;
+    --navy: #19172f;
     --navy-dark: #07294f;
     --blue: #125ca8;
-    --gold: #f3c21b;
+    --gold: #e58c00;
     --gold-dark: #d8a900;
     --sky: #eef6ff;
     --paper: #f7f9fc;
@@ -72,6 +72,13 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); }
     background: var(--gold);
 }
 
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
 .navbar-nav .nav-link {
     color: #eaf2fc;
     padding: 1.75rem .85rem 1.55rem;
@@ -138,8 +145,13 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); }
     align-items: center;
     overflow: hidden;
     background:
-        linear-gradient(90deg, rgba(5, 31, 62, .96) 0%, rgba(8, 49, 91, .9) 52%, rgba(10, 54, 100, .68) 100%),
-        radial-gradient(circle at 75% 35%, #3c6f9d 0, #123f70 32%, #082c55 70%);
+    linear-gradient(90deg, rgba(5, 31, 62, 0.65) 0%, rgba(8, 49, 91, 0.50) 50%, rgba(10, 54, 100, 0.30) 100% ),
+    url("../images/event.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .hero-section::after {
@@ -177,7 +189,12 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); }
 
 /* PAGE BANNER */
 .page-banner {
-    background: linear-gradient(100deg, var(--navy-dark), var(--navy));
+    background:
+        linear-gradient( 90deg, rgba(5, 31, 62, 0.78) 0%, rgba(8, 49, 91, 0.65) 50%, rgba(10, 54, 100, 0.45) 100% ),
+        url("../images/event1.png");
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
     color: #fff;
     padding: 4rem 0;
     position: relative;
@@ -316,7 +333,7 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); }
 .no-results { text-align: center; padding: 1rem; color: var(--muted); background: var(--sky); border-radius: 5px; }
 
 /* FOOTER */
-.site-footer { background: var(--navy-dark); color: #b9c9dc; padding: 2.4rem 0 1.2rem; }
+.site-footer { background: var(--navy); color: #b9c9dc; padding: 2.4rem 0 1.2rem; }
 .footer-top { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,.22); }
 .footer-brand { color: #fff; display: flex; align-items: center; gap: .75rem; text-decoration: none; }
 .footer-brand .brand-mark { transform: scale(.85); transform-origin: left center; }
