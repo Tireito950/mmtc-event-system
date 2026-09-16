@@ -1,10 +1,14 @@
 <footer class="site-footer">
     <div class="container">
-        <div class="footer-top">
-            <a class="footer-brand" href="index.php">
-                <span class="brand-mark"><i class="bi bi-building"></i></span>
-                <span><strong>MACMILLAN</strong><small>COLLEGE</small></span>
-            </a>
+    <div class="footer-top">
+        <a class="footer-brand" href="index.php">
+            <img src="images/logo.jpg" alt="Macmillan College Logo" class="brand-logo">
+            <span>
+                <strong>MACMILLAN</strong>
+                <small>COLLEGE</small>
+            </span>
+        </a>
+
 
             <div class="footer-links">
                 <a href="index.php">Home</a>
