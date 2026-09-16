@@ -47,10 +47,17 @@ $result = mysqli_query($conn, $sql);
                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
                     <div class="col-md-4">
                         <div class="event-card h-100">
-                            <div class="event-visual">
-                                <span class="event-icon"><i class="bi bi-calendar2-event"></i></span>
+                            <!-- <div class="event-visual">
+                                 <span class="event-icon"><i class="bi bi-calendar2-event"></i></span> 
                                 <span class="event-date-chip"><?php echo date("d M Y", strtotime($row['event_date'])); ?></span>
-                            </div>
+                            </div> -->
+                            <div class="card">
+                                <span class="event-date-chip"><?php echo date("d M Y", strtotime($row['event_date'])); ?></span>
+                        <img src="images/<?php echo htmlspecialchars($row['event_image']); ?>" 
+                            class="card-img-top" 
+                            alt="<?php echo htmlspecialchars($row['event_name']); ?>"
+                            style="height: 200px; object-fit: cover;">
+
                             <div class="card-body d-flex flex-column">
                                 <h5><?php echo htmlspecialchars($row['event_name']); ?></h5>
                                 <p class="event-location"><i class="bi bi-geo-alt"></i> <?php echo htmlspecialchars($row['event_venue']); ?></p>
@@ -59,6 +66,8 @@ $result = mysqli_query($conn, $sql);
                             </div>
                         </div>
                     </div>
+                </div>
+
                 <?php endwhile; ?>
             <?php else: ?>
                 <div class="col-12"><div class="empty-state">No upcoming events right now. Please check again later.</div></div>
